@@ -358,7 +358,7 @@ h1 {
 
 .option {
     width: 26%;
-    height: 56vh;
+    height: auto;
     display: inline-block;
     padding: 15px 30px;
     margin: 10px;
