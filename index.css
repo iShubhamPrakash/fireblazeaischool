@@ -899,6 +899,11 @@ h1 {
         color: rgb(236, 113, 87);
     }
 
+    #contact p,
+    #contact a {
+        color:rgb(97, 95, 95);
+    }
+
     #social {
         width: 100%;
         float: none;
