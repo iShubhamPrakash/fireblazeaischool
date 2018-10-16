@@ -882,6 +882,10 @@ h1 {
         height: 20vh;
     }
 
+    .placement-box div {
+        width: 70%;
+        height: 20vh;
+    }
     #details {
         float: none;
         width: 100%;
