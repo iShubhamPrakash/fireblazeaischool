@@ -85,6 +85,8 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    text-align: center;
 }
 
 #spinner {
