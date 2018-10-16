@@ -895,6 +895,7 @@ h1 {
     #form textarea {
         background: #f7f7f7;
         color:rgb(92, 86, 86);
+        border-radius: 6px;
     }
 
     #form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
