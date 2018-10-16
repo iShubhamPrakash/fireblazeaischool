@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fireblaze</title>
+    <link rel="icon" href="img/favicon.ico" type="image/ico">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+    crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+     <style>
+      #dummy-middle-part{
+        background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed !important;
+      }
+    </style>
+</head>
+<body>
+        <div id="loading">
+            <div id="spinner"></div>
+        </div>
+        <div id="a_tags">
+            <a onclick="hidemenu()"><i class="fas fa-times"></i></a>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="gallery.html">Gallery</a></td>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="placements.html">Placements</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <header id="header" class="animated fadeInDown" style="animation-delay: 2s;">
+            <div id="href_mob">
+                <div id="logo" class="animated rubberBand" style="animation-delay: 3.5s;"></div>
+                <div id="menu" onclick="showmenu()"><i class="fas fa-bars"></i></div>
+            </div>
+            <div id="href">
+            <center>
+                <table>
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                        <td><a href="courses.html">Courses</a></td>
+                        <td><a href="gallery.html">Gallery</a></td>
+                        <td><a href="#"><div id="logo" class="animated rubberBand" style="animation-delay: 3.5s;"></div></a></td>
+                        <td><a href="testimonials.html">Testimonials</a></td>
+                        <td><a href="placements.html">Placements</a></td>
+                        <td><a href="index.html#contact">Contact</a></td>
+                    </tr>
+                </table>
+            </center>
+            </div>
+        </header>
+        <div class="form-course">
+                <a onclick="hidecourse()"><i class="fas fa-times"></i></a>
+                <div id="the-form">
+                    <h2>Apply for a Course</h2>
+                    <form method="POST" action="course.php" autocomplete="off" id="courseform">
+                            <input type="text" placeholder="Name" id="name" name="name" required><br>
+                                <select name="course" id="course">
+                                    <option value="0">select your course</option>
+                                    <option value="Python Core & Advance">Python Core & Advance</option>
+                                    <option value="Data Analytics with Python">Data Analytics with Python</option>
+                                    <option value="Machine learning">Machine learning</option>
+                                    <option value="Data Analytics With R Programming">Data Analytics With R Programming</option>
+                                    <option value="Deep Learning & Artificial Intelligence">Deep Learning & Artificial Intelligence</option>
+                                    <option value="Web Frameworks : Django & Flask">Web Frameworks : Django & Flask</option>
+                                </select><br>
+                            <input type="email" placeholder="Email" name="email" id="email" required>
+                            <input type="tel" placeholder="Mobile" pattern="[0-9]{10}" name="mobile" id="mobile" required>
+                            <center>
+                                    <div id="message_crs" style="display:none !important;">
+                                        <p>
+                                            <div id="spinner" style="width:20px;height:20px;border: 4px solid rgb(236,113,87);border-bottom: 4px solid white;"></div>Applying...</div>
+                                        </p>
+                            </center>
+                            <button class="button-common" type="submit" id="coursebtn">Apply</button>
+                        </form>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                             $("#courseform").on('submit', function(event){
+                                $("#coursebtn").attr("disabled", true);
+                                $("#message_crs").css("display","inherit");
+                                event.preventDefault(); 
+                                var data = {
+                                name: $("#name").val(),
+                                email: $("#email").val(),
+                                course: $("#course").val(),
+                                mobile: $("#mobile").val()
+                                 };
+                                $.ajax({
+                                  type: "POST",
+                                  url: "course.php",
+                                  data: data,
+                                  success: function(){
+                                     $("#message_crs").html('Applied!!');
+                                     $('#courseform')[0].reset();
+                                     $("#coursebtn").attr("disabled", false);
+                                  },
+                                  error: function () {
+                                    $("#message_crs").html('Error Applying!!');
+                                    $("#coursebtn").attr("disabled", false);
+                                 }
+                                 });
+                                });
+                             });
+                        </script>
+                </div>
+            </div>
+        <div id="dummy-middle-part" class="animated fadeIn" style="animation-delay: 1.8s;">
+                <div id="top-part"></div>
+        </div>
+        <center>
+           <div id="dummy-overlap" class="animated fadeInUp" style="animation-delay: 2.4s;">
+                   <div>Data Science With R</div>
+           </div>
+        </center>
+    
+        <div id="dummy-content" class="animated fadeInUp" style="animation-delay: 2.6s;">
+            <center>
+                <div class="dummy-option">
+                    <div class="dummy-option-image" style="background:url('img/c5.png') center center;"></div>
+                    <div class="content-container">
+                            <div class="dummy-option-title">Certification in Data Science With R</div>
+                            <table>
+                            <tr>
+                                <td>Start Date</td>
+                                <td>Coming Soon</td>
+                            </tr>
+                            <tr>
+                                <td>Course Duration</td>
+                                <td>2 Month</td>
+                            </tr>
+                            <tr>
+                                <td>Commitment</td>
+                                <td>60 Hours</td>
+                            </tr>
+                            <tr>
+                                <td>Course Mode</td>
+                                <td>Offline</td>
+                            </tr>
+                            <tr>
+                                <td>Course Type</td>
+                                <td>Beginners to Intermediate</td>
+                            </tr>
+                        </table>
+                        </div>
+                <div class="dummy-option-desc">
+                    <h2>About Course</h2>
+                    The Fireblaze AI School attempts to teach students/course- participants some of the core ideas in machine learning, data- science that would help the participants go from a real world business problem to a first cut, working and deployable ML solution to the problem. Our primary focus is to help participants build real world ML solutions using the skills they learn in this course.
+                    <h2>Objectives</h2>
+                    <ul>
+                            <li>This course has No prerequisites as it is the foundation course in the world of Data.</li>
+                            <li>Students will develop relevant programming abilities in Machine Learning Algorithm</li>
+                            <li>Students will apply data science concepts and methods to solve problems in real-world contexts and will communicate these solutions effectively</li>
+                            <li>Students will develop the ability to build and assess data-based models</li>
+                            <li>Students will demonstrate proficiency with statistical analysis of data.</li>
+                    </ul>
+                    <h2>Target Audience</h2>
+                        <ul>
+                            <li>Professionals/Students from the technical background (B.E, BTEC, BCA, MCA, BBA, POLY)</li>
+                            <li>Pass out graduate or post graduate students in any technical stream.</li>
+                            <li>Open-minded technology lovers those who wanted to explore IT profession.</li>
+                            <li>Job seekers</li>
+                        </ul>
+                    <h2>About Instructor</h2>
+                    The founder of Fireblaze AI School, Mr. Aniruddha Kalbande drives the organization effectively towards its goal of providing high quality education. He is a professional trainer with more than 10,000 hours of industry experience in trainings students, company professionals and college faculties. 
+                </div>
+                    <button class="button-common" style="margin:15px 10px;" onclick="showcourse()">Apply Now</button>
+                    <a href="pdfs/c5.pdf" download="example"><button class="button-common" style="margin:15px 10px;width:220px;">Download Syllabus</button></a>
+                    <a href="tel:09325013467"><button class="button-uncommon" style="margin:15px 10px;">Call now</button></a>
+                </div>
+            </center>
+        </div>
+    
+        <div id="footer" style="margin-top:0px;">
+                <center>
+                <i class="far fa-copyright d"></i> Copyright 2018. Fireblaze AI School. All Rights Reserved
+                </center>
+        </div>
+    
+        <!-- SCRIPT STARTS ;) -->
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script type="text/javascript">
+        AOS.init();
+        setTimeout(function(){
+        $("#loading").addClass("animated fadeOut");
+        setTimeout(function(){
+        $("#loading").css("display","none");
+        },800);
+        },1800);
+        $(window).scroll(function() {
+        var hT = $('#top-part').offset().top,
+        hH = $('#top-part').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+        if (wS > (hT+hH-wH) && (hT < wS) && (wS+wH > hT+hH)){
+        $("#header").css("background","#fff");
+        $("#header").css("padding","1.5% 6%");
+        $("#header").css("color","#282828");
+        $("#header").css("box-shadow","0px 10px 20px rgba(0,0,0,0.2)");
+        $("#logo").css("width","50px");
+        $("#logo").css("height","50px");
+        }else{
+        $("#header").css("background","transparent");
+        $("#header").css("padding","4% 6%");
+        $("#header").css("color","#fff");
+        $("#logo").css("width","60px");
+        $("#logo").css("height","60px");
+        $("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
+        }
+        });
+        function showmenu(){
+            $("#a_tags").css("display","flex");
+            $("#a_tags").addClass("animated slideInRight");
+            setTimeout(function(){
+                $("#a_tags").removeClass("animated slideInRight");
+            },800);
+        }
+        function hidemenu(){
+            $("#a_tags").addClass("animated slideOutRight");
+            setTimeout(function(){
+                $("#a_tags").css("display","none");
+                $("#a_tags").removeClass("animated slideOutRight");
+            },800);
+        }
+        function showcourse(){
+            $(".form-course").css("display","flex");
+            $(".form-course").addClass("animated slideInUp");
+            setTimeout(function(){
+                $(".form-course").removeClass("animated slideInUp");
+            },800);
+        }
+        function hidecourse(){
+            $(".form-course").addClass("animated slideOutDown");
+            setTimeout(function(){
+                $(".form-course").css("display","none");
+                $(".form-course").removeClass("animated slideOutDown");
+            },800);
+        }
+        </script>
+</body>
+</html>

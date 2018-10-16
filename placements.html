@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fireblaze</title>
+    <link rel="icon" href="img/favicon.ico" type="image/ico">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+    crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="a_tags">
+        <a onclick="hidemenu()"><i class="fas fa-times"></i></a>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a></td>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="placements.html">Placements</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <header id="header" class="animated fadeInDown" style="animation-delay: 2s;">
+        <div id="href_mob">
+            <div id="logo" class="animated rubberBand" style="animation-delay: 3.5s;"></div>
+            <div id="menu" onclick="showmenu()"><i class="fas fa-bars"></i></div>
+        </div>
+        <div id="href">
+        <center>
+            <table>
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="courses.html">Courses</a></td>
+                    <td><a href="gallery.html">Gallery</a></td>
+                    <td><a href="#"><div id="logo" class="animated rubberBand" style="animation-delay: 3.5s;"></div></a></td>
+                    <td><a href="testimonials.html">Testimonials</a></td>
+                    <td><a href="placements.html">Placements</a></td>
+                    <td><a href="index.html#contact">Contact</a></td>
+                </tr>
+            </table>
+        </center>
+        </div>
+    </header>
+    <div id="dummy-middle-part" class="animated fadeIn" style="animation-delay: 1.8s;">
+            <div id="top-part"></div>
+    </div>
+    <center>
+       <div id="dummy-overlap" class="animated fadeInUp" style="animation-delay: 2.4s;">
+               <div>Placement</div>
+       </div>
+    </center>
+
+    <div id="dummy-content" class="animated fadeInUp dummy-place" style="animation-delay: 2.6s;">
+        <h1>Fireblaze Tech School Alumni's Work At</h1>
+        <div style="background:url('img/1.jpg') center center;"></div>
+        <div style="background:url('https://s3.amazonaws.com/nashvillechamber.com/P2020-Investor-logos/bny-mellon-logo-2016.png') center center;"></div>
+        <div style="background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/1200px-Infosys_logo.svg.png') center center;"></div>
+        <div style="background:url('https://www.capgemini.com/wp-content/uploads/2017/10/cg_logo.jpg') center center;"></div>
+        <div style="background:url('img/5.png') center center;"></div>
+        <div style="background:url('http://www.unitileindia.com/userfiles/cache/thumbnails/1900/tn-ee76ccedf79bede2b6abda6dd530e165.jpg') center center;"></div>
+        <div style="background:url('http://www.prayag.com/blogs/wp-content/uploads/2014/09/Mu-Sigma-Gets-it-right.jpg') center center;"></div>
+        <div style="background:url('http://www.ways2capital.com/wcblog/wp-content/uploads/2018/03/persistent-systems-bbsrbuzz.jpg') center center;"></div>
+    </div>
+
+    <div id="footer">
+            <center>
+            <i class="far fa-copyright d"></i> Copyright 2018. Fireblaze AI School. All Rights Reserved
+            </center>
+    </div>
+
+    <!-- SCRIPT STARTS ;) -->
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+    AOS.init();
+    setTimeout(function(){
+    $("#loading").addClass("animated fadeOut");
+    setTimeout(function(){
+    $("#loading").css("display","none");
+    },800);
+    },1800);
+    $(window).scroll(function() {
+    var hT = $('#top-part').offset().top,
+    hH = $('#top-part').outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH) && (hT < wS) && (wS+wH > hT+hH)){
+    $("#header").css("background","#fff");
+    $("#header").css("padding","1.5% 6%");
+    $("#header").css("color","#282828");
+    $("#header").css("box-shadow","0px 10px 20px rgba(0,0,0,0.2)");
+    $("#logo").css("width","50px");
+    $("#logo").css("height","50px");
+    }else{
+    $("#header").css("background","transparent");
+    $("#header").css("padding","4% 6%");
+    $("#header").css("color","#fff");
+    $("#logo").css("width","60px");
+    $("#logo").css("height","60px");
+    $("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
+    }
+    });
+    function showmenu(){
+        $("#a_tags").css("display","flex");
+        $("#a_tags").addClass("animated slideInRight");
+        setTimeout(function(){
+            $("#a_tags").removeClass("animated slideInRight");
+        },800);
+    }
+    function hidemenu(){
+        $("#a_tags").addClass("animated slideOutRight");
+        setTimeout(function(){
+            $("#a_tags").css("display","none");
+            $("#a_tags").removeClass("animated slideOutRight");
+        },800);
+    }
+    </script>
+</body>
+</html>
