@@ -891,6 +891,27 @@ h1 {
         width: 100%;
     }
 
+    #form input,
+    #form textarea {
+        background: #f7f7f7;
+        color:rgb(92, 86, 86);
+    }
+
+    #form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgb(236, 113, 87);
+        opacity: 1; /* Firefox */
+    }
+
+    #form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: rgb(236, 113, 87);    }
+
+    #form ::-ms-input-placeholder { /* Microsoft Edge */
+        color: rgb(236, 113, 87);    }
+
+    #form button {
+        background-color: rgb(236, 113, 87);
+    }
+
     #contact {
         width: 90%;
         height: auto;
