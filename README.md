@@ -6,7 +6,7 @@
 
  Website from this repo: [https://i-shubhamprakash.github.io/fireblazeaischool/](https://i-shubhamprakash.github.io/fireblazeaischool/)
 
-Origional Website: [http://www.fireblazeaischool.in/](http://www.fireblazeaischool.in/)
+Main Website: [http://www.fireblazeaischool.in/](http://www.fireblazeaischool.in/)
 
 ## Following modifications and bug fixed
 
