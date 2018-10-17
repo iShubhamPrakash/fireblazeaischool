@@ -1,0 +1,19 @@
+76874ed Fix: course box button overflow
+a5cba90 Fix: put course boxes exactly at the center when viewed on mobile device
+c9f01ab Fix: Company logo very small on Placement page on mobile device
+56c80f5 Fix: social button invisible on mobile device
+b36b59a Remove: bad css for Error Sending Mail  box
+9db3c71 Fix: contact form erro box layout
+10b3a83 Add: border radius to form input in mobile device
+5942791 Fix: contact for invisible on mobile device
+4d259b3 Fix: Details in contact not visible on small screen
+c1fcf18 Fix: increase placement div width
+f6372bd Fix: social contact button hide
+efa03a4 Add: base code
+
+Note: This folder is git initialised, you can use git log to see the exact changes in the code.
+
+Thanks.
+
+-Shubham Prakash
+(shubham.prakash2308@gmail.com)

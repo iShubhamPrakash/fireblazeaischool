@@ -888,6 +888,7 @@ h1 {
         width: 70%;
         height: 20vh;
     }
+
     #details {
         float: none;
         width: 100%;
@@ -901,20 +902,26 @@ h1 {
     #form input,
     #form textarea {
         background: #f7f7f7;
-        color:rgb(92, 86, 86);
+        color: rgb(92, 86, 86);
         border-radius: 6px;
     }
 
-    #form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    #form ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: rgb(236, 113, 87);
-        opacity: 1; /* Firefox */
+        opacity: 1;
+        /* Firefox */
     }
 
-    #form :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: rgb(236, 113, 87);    }
+    #form :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgb(236, 113, 87);
+    }
 
-    #form ::-ms-input-placeholder { /* Microsoft Edge */
-        color: rgb(236, 113, 87);    }
+    #form ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: rgb(236, 113, 87);
+    }
 
     #form button {
         background-color: rgb(236, 113, 87);
@@ -930,17 +937,26 @@ h1 {
 
     #contact p,
     #contact a {
-        color:rgb(97, 95, 95);
+        color: rgb(97, 95, 95);
     }
 
     #social {
         width: 100%;
         float: none;
-        margin: 30px 0px;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .c {
+        font-size: 2em;
+        color: rgb(236, 113, 87);
+        margin-right: unset;
+        padding: 15px;
     }
 
     #social svg {
-        color:rgb(236, 113, 87);
+        color: rgb(248, 100, 70);
     }
 
     .dummy-gallery img {
