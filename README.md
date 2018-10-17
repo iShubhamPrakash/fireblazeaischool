@@ -2,7 +2,7 @@
 
 (*This is the source code for the website of fireblazeaischool.  As per the given task, I have modified and fixed bugs in the code as an Intern at fireblaze*)
 
-> **IMPORTANT**- Don't send PR as this repo as this project is not meant to be colaboratively worked on and hence any PR will be completely ignored.
+> **IMPORTANT**- Don't send PR to this repo as this project is not meant to be colaboratively worked on and hence any PR will be completely ignored.
 
  Website from this repo: [https://i-shubhamprakash.github.io/fireblazeaischool/](https://i-shubhamprakash.github.io/fireblazeaischool/)
 
