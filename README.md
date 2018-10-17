@@ -21,6 +21,7 @@ Main Website: [http://www.fireblazeaischool.in/](http://www.fireblazeaischool.in
 * Fix: Details in contact not visible on small screen
 * Fix: increase placement div width
 * Fix: social contact button hide
+* Add: Insta button in social section
 
 > Note: This folder is git initialised, you can use git log to see the exact changes in the code.
 
